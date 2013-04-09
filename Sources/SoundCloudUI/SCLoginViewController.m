@@ -118,7 +118,7 @@
 #pragma mark UIViewController
 
 - (void)viewDidLoad;
-{
+{   
     [super viewDidLoad];
     self.loginView = [[[SCLoginView alloc] initWithFrame:self.view.bounds] autorelease];
     self.loginView.loginDelegate = self;
@@ -134,10 +134,7 @@
 - (void)viewWillAppear:(BOOL)animated;
 {
     [super viewWillAppear:animated];
-    SCConnectToSoundCloudTitleView *scTitleView = [[[SCConnectToSoundCloudTitleView alloc] initWithFrame:CGRectMake(0,
-                                                                                                                    0,
-                                                                                                                    CGRectGetWidth(self.view.bounds),
-                                                                                                                    44.0)] autorelease];
+    SCConnectToSoundCloudTitleView *scTitleView = [[[SCConnectToSoundCloudTitleView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 44.0)] autorelease];
 
     [self.view addSubview:scTitleView];
     self.loginView.frame = CGRectMake(0,
