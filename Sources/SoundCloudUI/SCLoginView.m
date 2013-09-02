@@ -221,7 +221,7 @@
     self.tosLabel = [[OHAttributedLabel alloc] initWithFrame:CGRectZero];
     self.tosLabel.attributedText = text;
     self.tosLabel.centerVertically = NO;
-    self.tosLabel.lineBreakMode = UILineBreakModeWordWrap;
+    self.tosLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.tosLabel.textAlignment = NSTextAlignmentCenter;
     self.tosLabel.textColor = [UIColor soundCloudLightGrey];
     self.tosLabel.backgroundColor = [UIColor clearColor];

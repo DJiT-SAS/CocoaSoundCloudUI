@@ -130,7 +130,7 @@
     // Cover Image
     self.coverImageButton = [[[SCCoverImageButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0)] autorelease];
     self.coverImageButton.opaque = NO;
-    self.coverImageButton.titleLabel.lineBreakMode = UILineBreakModeWordWrap;
+    self.coverImageButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.coverImageButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.coverImageButton.titleLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
     [self.coverImageButton setShowsTouchWhenHighlighted:YES];
