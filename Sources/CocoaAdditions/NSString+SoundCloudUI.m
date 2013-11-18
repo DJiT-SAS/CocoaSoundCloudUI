@@ -21,7 +21,7 @@
 #include <CommonCrypto/CommonDigest.h>
 
 #if TARGET_OS_IPHONE
-#import "JSONKit.h"
+#import "CustomJSON.h"
 #else
 #import <JSONKit/JSONKit.h>
 #endif

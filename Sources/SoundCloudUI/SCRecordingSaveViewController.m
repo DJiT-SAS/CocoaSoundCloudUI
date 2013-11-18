@@ -21,7 +21,7 @@
 #import "UIViewController+SoundCloudUI.h"
 #import "SCAlertView.h"
 
-#import "JSONKit.h"
+#import "CustomJSON.h"
 #import "SCAPI.h"
 #import "SCAccount+Private.h"
 
