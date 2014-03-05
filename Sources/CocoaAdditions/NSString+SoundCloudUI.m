@@ -29,7 +29,7 @@
 
 
 #import "NSString+SoundCloudUI.h"
-
+#import "NSData+SoundCloudUI.h"
 
 @implementation NSString (SoundCloudUI)
 
@@ -124,7 +124,8 @@
 
 - (id)JSONObject;
 {
-	return [self objectFromJSONString];
+    NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    return [jsonData JSONObject];
 }
 
 
