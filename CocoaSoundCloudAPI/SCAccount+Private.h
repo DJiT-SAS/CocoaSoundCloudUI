@@ -20,11 +20,18 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SCAPI.h"
-#import "SCFoursquarePlacePickerControllerDelegate.h"
+#import "SCAccount.h"
 
-@interface SCFoursquarePlacePickerController : UITableViewController <UITextFieldDelegate>
-- (id)initWithDelegate:(id<SCFoursquarePlacePickerControllerDelegate>)aDelegate
-              clientID:(NSString *)aClientID
-          clientSecret:(NSString *)aClientSecret;
+#pragma mark Notifications
+
+extern NSString * const SCAccountDidChangeUserInfoNotification;
+
+#pragma mark -
+
+@interface SCAccount (Private)
+
+@property (nonatomic, readonly) NXOAuth2Account *oauthAccount;
+@property (nonatomic, copy) NSDictionary *userInfo;
+- (id)initWithOAuthAccount:(NXOAuth2Account *)account;
+
 @end

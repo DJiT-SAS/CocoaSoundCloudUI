@@ -18,13 +18,7 @@
  * 
  */
 
-#import <Foundation/Foundation.h>
-
-#import "SCAPI.h"
-#import "SCFoursquarePlacePickerControllerDelegate.h"
-
-@interface SCFoursquarePlacePickerController : UITableViewController <UITextFieldDelegate>
-- (id)initWithDelegate:(id<SCFoursquarePlacePickerControllerDelegate>)aDelegate
-              clientID:(NSString *)aClientID
-          clientSecret:(NSString *)aClientSecret;
-@end
+#import "SCConstants.h"
+#import "SCSoundCloud.h"
+#import "SCAccount.h"
+#import "SCRequest.h"

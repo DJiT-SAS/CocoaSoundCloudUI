@@ -21,8 +21,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "OHAttributedLabel.h"
-
-#import "NSAttributedString+Attributes.h"
 #import "QuartzCore+SoundCloudUI.h"
 #import "UIImage+SoundCloudUI.h"
 #import "UIDevice+SoundCloudUI.h"

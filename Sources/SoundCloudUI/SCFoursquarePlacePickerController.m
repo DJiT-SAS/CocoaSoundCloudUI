@@ -24,7 +24,7 @@
 #import "UIColor+SoundCloudUI.h"
 #import "UIDevice+SoundCloudUI.h"
 
-#import "SCConstants.h"
+#import "SCAPI.h"
 #import "SCBundle.h"
 
 #import "SCFoursquarePlacePickerController.h"

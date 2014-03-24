@@ -22,9 +22,7 @@
 
 #import "NSString+SoundCloudUI.h"
 
-
-#import "SCAccount.h"
-#import "SCRequest.h"
+#import "SCAPI.h"
 
 #import "SCBundle.h"
 

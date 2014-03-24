@@ -1,5 +1,5 @@
 /*
- * Copyright 2010, 2011 nxtbgthng for SoundCloud Ltd.
+ * Copyright 2010, 2011 ; for SoundCloud Ltd.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -20,11 +20,22 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SCAPI.h"
-#import "SCFoursquarePlacePickerControllerDelegate.h"
+#pragma mark Notifications
 
-@interface SCFoursquarePlacePickerController : UITableViewController <UITextFieldDelegate>
-- (id)initWithDelegate:(id<SCFoursquarePlacePickerControllerDelegate>)aDelegate
-              clientID:(NSString *)aClientID
-          clientSecret:(NSString *)aClientSecret;
+extern NSString * const SCAccountDidFailToGetAccessToken;
+
+@class NXOAuth2Account;
+
+@interface SCAccount : NSObject {
+@private
+    NXOAuth2Account *oauthAccount;
+}
+
+#pragma mark Accessors
+
+@property (nonatomic, readonly) NSString *identifier;
+
+
+- (NSString*)oauthAccessToken;
+
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8E80A25E-296E-44B7-95BE-113231D939D4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SoundCloudUI</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1E750ED7-5031-4473-8EB0-F2B93FAE8782</key>
+		<string>https://github.com/DJiT-SAS/CocoaSoundCloudUI.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SoundCloudUI.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1E750ED7-5031-4473-8EB0-F2B93FAE8782</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DJiT-SAS/CocoaSoundCloudUI.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1E750ED7-5031-4473-8EB0-F2B93FAE8782</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1E750ED7-5031-4473-8EB0-F2B93FAE8782</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CocoaSoundCloudUI</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -25,19 +25,17 @@
 #endif
 #import <QuartzCore/QuartzCore.h>
 
-#import "SCSoundCloud.h"
+#import "SCAPI.h"
 #import "SCSoundCloud+Private.h"
 #import "UIColor+SoundCloudUI.h"
 #import "UIDevice+SoundCloudUI.h"
 #import "UIView+SoundCloudUI.h"
-#import "SCConstants.h"
 #import "SCBundle.h"
 #import "SCLoginView.h"
 #import "SCGradientButton.h"
 #import "SCAlertView.h"
 #import "SCDrawing.h"
 #import "OHAttributedLabel.h"
-#import "NSAttributedString+Attributes.h"
 
 @interface SCLoginView () <OHAttributedLabelDelegate, UIWebViewDelegate>
 @property (nonatomic, readwrite, assign) UIActivityIndicatorView *activityIndicator;
@@ -217,6 +215,14 @@
 {
     NSMutableAttributedString *text = [NSMutableAttributedString attributedStringWithString:SCLocalizedString(@"sign_in_tos_pp_body", nil)];
     [text setFont:[UIFont systemFontOfSize:13.0]];
+	
+	NSRange touLinkRange = [text.string rangeOfString:SCLocalizedString(@"terms_of_use_substring", nil)];
+    NSAssert((touLinkRange.location != NSNotFound), @"Localisation of sign_in_tos_pp_body needs to contain substring");
+	[text setLink:[NSURL URLWithString:kTermsOfServiceURL] range:touLinkRange];
+	
+	NSRange ppLinkRange = [text.string rangeOfString:SCLocalizedString(@"privatcy_policy_substring", nil)];
+    NSAssert((ppLinkRange.location != NSNotFound), @"Localisation of sign_in_tos_pp_body needs to contain substring");
+	[text setLink:[NSURL URLWithString:kPrivacyPolicyURL] range:ppLinkRange];
 
     self.tosLabel = [[OHAttributedLabel alloc] initWithFrame:CGRectZero];
     self.tosLabel.attributedText = text;
@@ -227,16 +233,6 @@
     self.tosLabel.backgroundColor = [UIColor clearColor];
     self.tosLabel.delegate = self;
     [self.tosLabel setLinkColor:[UIColor soundCloudGrey]];
-
-    NSRange touLinkRange = [text.string rangeOfString:SCLocalizedString(@"terms_of_use_substring", nil)];
-    NSAssert((touLinkRange.location != NSNotFound), @"Localisation of sign_in_tos_pp_body needs to contain substring");
-    [self.tosLabel addCustomLink:[NSURL URLWithString:kTermsOfServiceURL]
-                         inRange:touLinkRange];
-
-    NSRange ppLinkRange = [text.string rangeOfString:SCLocalizedString(@"privatcy_policy_substring", nil)];
-    NSAssert((ppLinkRange.location != NSNotFound), @"Localisation of sign_in_tos_pp_body needs to contain substring");
-    [self.tosLabel addCustomLink:[NSURL URLWithString:kPrivacyPolicyURL]
-                         inRange:ppLinkRange];
 
     [self addSubview:self.tosLabel];
 }

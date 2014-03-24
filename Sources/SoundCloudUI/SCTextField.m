@@ -22,7 +22,7 @@
 
 #import "SCTextField.h"
 #import "UIColor+SoundCloudUI.h"
-#import "SCConstants.h"
+#import "SCAPI.h"
 #import "SCBundle.h"
 
 @interface SCTextField ()

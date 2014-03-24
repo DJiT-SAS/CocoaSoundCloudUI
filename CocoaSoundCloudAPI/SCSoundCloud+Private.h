@@ -18,13 +18,18 @@
  * 
  */
 
-#import <Foundation/Foundation.h>
+#import "SCSoundCloud.h"
 
-#import "SCAPI.h"
-#import "SCFoursquarePlacePickerControllerDelegate.h"
+@interface SCSoundCloud (Private)
 
-@interface SCFoursquarePlacePickerController : UITableViewController <UITextFieldDelegate>
-- (id)initWithDelegate:(id<SCFoursquarePlacePickerControllerDelegate>)aDelegate
-              clientID:(NSString *)aClientID
-          clientSecret:(NSString *)aClientSecret;
++ (SCSoundCloud *)shared;
+
+#pragma mark Configuration
+
++ (NSDictionary *)configuration;
+
+#pragma mark Manage Accounts
+
+- (void)requestAccessWithUsername:(NSString *)username password:(NSString *)password;
+
 @end

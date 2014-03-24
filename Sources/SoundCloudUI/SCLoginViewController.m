@@ -26,9 +26,8 @@
 #import "SCConnectToSoundCloudTitleView.h"
 #import "NXOAuth2AccountStore.h"
 
-#import "SCSoundCloud.h"
+#import "SCAPI.h"
 #import "SCSoundCloud+Private.h"
-#import "SCConstants.h"
 #import "SCBundle.h"
 
 #import "SCUIErrors.h"
