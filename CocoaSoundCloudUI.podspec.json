@@ -24,9 +24,6 @@
   "resources": "SoundCloud.bundle",
   "frameworks": "CoreLocation",
   "dependencies": {
-    "CocoaSoundCloudAPI": [
-      
-    ],
     "OHAttributedLabel": [
 
     ]
